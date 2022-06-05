@@ -12,10 +12,10 @@ const createDate = (data, index) => {
   let _date = [];
   if (index) {
     for (i = 0; i < data.length; i++) {
-      let hasil = (Date.parse(data[i]) / 1000).toString();
+      let hasil = Date.parse(data[i]) / 1000;
       _date.push(hasil);
     }
-    return _date[index];
+    return _date[index].toString();
   } else {
     for (i = 0; i < data.length; i++) {
       let hasil = (Date.parse(data[i]) / 1000).toString();
